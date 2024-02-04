@@ -1,6 +1,4 @@
-gdown==4.3.3
 numpy==1.26.0
-pandas==2.1.1
 matplotlib==3.8.0
 
 nibabel==5.2.0
