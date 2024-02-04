@@ -392,6 +392,20 @@
     
 
     
+    \hypertarget{medical-imaging}{%
+\section{Medical Imaging}\label{medical-imaging}}
+
+\begin{itemize}
+\tightlist
+\item
+  Complete walkthrough of the steps taken to solve the two tasks
+\item
+  run notebook in order to interactively play around with the 3D images
+\item
+  the data can be obtained from this
+  \href{https://drive.google.com/drive/folders/1vVpu9lgjqHB4UX9xLweQGW4qgAjCaOAh?usp=drive_link}{link}
+\end{itemize}
+
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{1}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -451,15 +465,15 @@ second.
     The get\_fdata() function is a method in the nibabel library in Python,
 which is used for reading neuroimaging data formats, including NIfTI.
 
-When you load a NIfTI file using nibabel.load(), it returns a
-Nifti1Image object. This object contains the header and image data from
-the NIfTI file, but the image data is not immediately loaded into memory
-to save resources.
+When loading a NIfTI file using \texttt{nibabel.load()}, it returns a
+\texttt{Nifti1Image} object. This object contains the header and image
+data from the NIfTI file, but the image data is not immediately loaded
+into memory to save resources.
 
-The get\_fdata() method is used to load the image data into memory as a
-numpy array. This is useful when you need to manipulate the image data,
-such as performing mathematical operations, resampling, or displaying
-the image.
+The \texttt{get\_fdata()} method is used to load the image data into
+memory as a numpy array. This is useful when you need to manipulate the
+image data, such as performing mathematical operations, resampling, or
+displaying the image.
 
     \hypertarget{the-data-at-glance}{%
 \section{The Data at Glance}\label{the-data-at-glance}}
@@ -487,7 +501,7 @@ The typical three \emph{perspectives} in medical imaging are as follows:
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_5_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_6_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -530,6 +544,12 @@ interactive(children=(IntSlider(value=255, description='layer', max=511), Output
 \end{Verbatim}
 \end{tcolorbox}
         
+    \begin{figure}
+\centering
+\includegraphics{images/slider1.PNG}
+\caption{Slider1}
+\end{figure}
+
     From a sagittal and coronal view, the image appears to be squished. The
 voxels (Pixels in 2D \(\approx\) Voxels in 3D) must therefore be scaled.
 
@@ -573,6 +593,12 @@ interactive(children=(IntSlider(value=255, description='layer', max=511), Output
 \end{Verbatim}
 \end{tcolorbox}
         
+    \begin{figure}
+\centering
+\includegraphics{images/slider2.PNG}
+\caption{Slider2}
+\end{figure}
+
     \hypertarget{task-1}{%
 \section{Task 1}\label{task-1}}
 
@@ -642,6 +668,12 @@ interactive(children=(IntSlider(value=80, description='layer1', max=161), IntSli
 \end{Verbatim}
 \end{tcolorbox}
         
+    \begin{figure}
+\centering
+\includegraphics{images/slider3.PNG}
+\caption{Slider3}
+\end{figure}
+
     \hypertarget{b-create-one-maximum-intensity-projection-mip-along-the-coronal-axis-and-one-mip-along-the-sagittal-axis}{%
 \subsubsection{b) Create one maximum intensity projection (MIP) along
 the coronal axis and one MIP along the sagittal
@@ -708,7 +740,7 @@ Resampled voxel sizes in mm: (3.0, 3.0, 3.0)
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_14_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_18_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -739,12 +771,12 @@ dp}\label{c-save-the-resulting-images-as-png-file-with-at-least-400-dp}}
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_16_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_20_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_16_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_20_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -821,6 +853,12 @@ interactive(children=(IntSlider(value=80, description='layer1', max=161), IntSli
 \end{Verbatim}
 \end{tcolorbox}
         
+    \begin{figure}
+\centering
+\includegraphics{images/slider4.PNG}
+\caption{Slider4}
+\end{figure}
+
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{10}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -835,7 +873,7 @@ interactive(children=(IntSlider(value=80, description='layer1', max=161), IntSli
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_20_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{development_files/development_25_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -904,6 +942,12 @@ interactive(children=(IntSlider(value=80, description='layer1', max=161), IntSli
 \end{Verbatim}
 \end{tcolorbox}
         
+    \begin{figure}
+\centering
+\includegraphics{images/slider5.PNG}
+\caption{Slider5}
+\end{figure}
+
     We can clearly see the typical shape of the aorta, including the
 transverse arch and ascending and descending thoracic.
 
@@ -943,7 +987,7 @@ The calculation to determine the volume of the aorta can be done in
 various ways. Here are two of them:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{20}{\boxspacing}
+\prompt{In}{incolor}{13}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Volume computed with original (anisotropic) image:}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
 \PY{n}{white\PYZus{}voxels} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{seg\PYZus{}mtx} \PY{o}{==} \PY{l+m+mi}{1}\PY{p}{)}  
@@ -970,13 +1014,13 @@ approach 1:
 The volume of the segmented aorta is 323.7954567146301 millilitres.
 
 approach 2:
-Volume of Aorta: 323795.4567146301 mm\^{}3
+Volume of Aorta: 323795.4567146301 cubic milimeters
 Volume of Aorta: 323.7954567146301 millilitres
 Volume of Aorta: 0.3237954567146301 litres
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{19}{\boxspacing}
+\prompt{In}{incolor}{14}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Volume computed with resampled (isotropic) image:}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
 \PY{n}{white\PYZus{}voxels} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{resampled\PYZus{}seg\PYZus{}mtx} \PY{o}{==} \PY{l+m+mi}{1}\PY{p}{)}  
@@ -1002,7 +1046,7 @@ approach 1:
 The volume of the segmented aorta is 325.10699999999997 millilitres.
 
 approach 2:
-Volume of Aorta: 325107.0 mm\^{}3
+Volume of Aorta: 325107.0 cubic milimeters
 Volume of Aorta: 325.10699999999997 millilitres
 Volume of Aorta: 0.325107 litres
     \end{Verbatim}
@@ -1012,23 +1056,86 @@ Volume of Aorta: 0.325107 litres
 is necessary to resample the image.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{15}{\boxspacing}
+\prompt{In}{incolor}{16}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{o}{!}jupyter\PY{+w}{ }nbconvert\PY{+w}{ }\PYZhy{}\PYZhy{}to\PY{+w}{ }latex\PY{+w}{ }development.ipynb
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-[NbConvertApp] Converting notebook development.ipynb to latex
-C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}nbconvert\textbackslash{}utils\textbackslash{}pandoc.py:51:
-RuntimeWarning: You are using an unsupported version of pandoc (2.12).
-Your version must be at least (2.14.2) but less than (4.0.0).
-Refer to https://pandoc.org/installing.html.
-Continuing with doubts{\ldots}
-  check\_pandoc\_version()
-[NbConvertApp] Support files will be in development\_files\textbackslash{}
-[NbConvertApp] Making directory development\_files
-[NbConvertApp] Writing 70115 bytes to development.tex
+Traceback (most recent call last):
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 623, in get
+    value = obj.\_trait\_values[self.name]  \# type: ignore
+            \textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+KeyError: 'template\_paths'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in \_run\_module\_as\_main
+  File "<frozen runpy>", line 88, in \_run\_code
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Scripts\textbackslash{}jupyter-nbconvert.EXE\textbackslash{}\_\_main\_\_.py",
+line 7, in <module>
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}jupyter\_core\textbackslash{}application.py", line 285, in launch\_instance
+    return super().launch\_instance(argv=argv, **kwargs)
+           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}traitlets\textbackslash{}config\textbackslash{}application.py", line 1046, in launch\_instance
+    app.start()
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}nbconvert\textbackslash{}nbconvertapp.py",
+line 420, in start
+    self.convert\_notebooks()
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}nbconvert\textbackslash{}nbconvertapp.py",
+line 586, in convert\_notebooks
+    self.exporter = cls(config=self.config)
+                    \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
+packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 350, in \_\_init\_\_
+    super().\_\_init\_\_(config=config, **kw)
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
+packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}exporter.py", line 123, in \_\_init\_\_
+    self.\_init\_preprocessors()
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
+packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 535, in
+\_init\_preprocessors
+    conf = self.\_get\_conf()
+           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
+packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 553, in \_get\_conf
+    for path in map(Path, self.template\_paths):
+                          \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 716, in \_\_get\_\_
+    return t.cast(G, self.get(obj, cls))  \# the G should encode the Optional
+                     \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 626, in get
+    default = obj.trait\_defaults(self.name)
+              \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 1891, in trait\_defaults
+    return self.\_get\_trait\_default\_generator(names[0])(self)
+           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
+packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 1244, in \_\_call\_\_
+    return self.func(*args, **kwargs)
+           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
+packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 564, in \_template\_paths
+    template\_names = self.get\_template\_names()
+                     \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
+  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
+packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 652, in
+get\_template\_names
+    raise ValueError(msg)
+ValueError: No template sub-directory with name 'notebook' found in the
+following paths:
+        C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}jupyter
+        C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}share\textbackslash{}jupyter
+        C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}share\textbackslash{}jupyter
+        C:\textbackslash{}ProgramData\textbackslash{}jupyter
     \end{Verbatim}
 
 
