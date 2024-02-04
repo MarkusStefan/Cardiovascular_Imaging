@@ -561,58 +561,24 @@ The volume of the isotropic and anisotropic sligthly differ by $\approx$ 1.3 mil
 !jupyter nbconvert --to latex development.ipynb
 ```
 
-    Traceback (most recent call last):
-      File "C:\Users\marku\AppData\Roaming\Python\Python311\site-packages\traitlets\traitlets.py", line 623, in get
-        value = obj._trait_values[self.name]  # type: ignore
-                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-    KeyError: 'template_paths'
+    [NbConvertApp] Converting notebook development.ipynb to latex
+    C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\utils\pandoc.py:51: RuntimeWarning: You are using an unsupported version of pandoc (2.12).
+    Your version must be at least (2.14.2) but less than (4.0.0).
+    Refer to https://pandoc.org/installing.html.
+    Continuing with doubts...
+      check_pandoc_version()
+    [NbConvertApp] Support files will be in development_files\
+    [NbConvertApp] Making directory development_files
+    [NbConvertApp] Writing 78154 bytes to development.tex
     
-    During handling of the above exception, another exception occurred:
-    
-    Traceback (most recent call last):
-      File "<frozen runpy>", line 198, in _run_module_as_main
-      File "<frozen runpy>", line 88, in _run_code
-      File "C:\Users\marku\miniconda3\Scripts\jupyter-nbconvert.EXE\__main__.py", line 7, in <module>
-      File "C:\Users\marku\AppData\Roaming\Python\Python311\site-packages\jupyter_core\application.py", line 285, in launch_instance
-        return super().launch_instance(argv=argv, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\AppData\Roaming\Python\Python311\site-packages\traitlets\config\application.py", line 1046, in launch_instance
-        app.start()
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\nbconvertapp.py", line 420, in start
-        self.convert_notebooks()
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\nbconvertapp.py", line 586, in convert_notebooks
-        self.exporter = cls(config=self.config)
-                        ^^^^^^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\exporters\templateexporter.py", line 350, in __init__
-        super().__init__(config=config, **kw)
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\exporters\exporter.py", line 123, in __init__
-        self._init_preprocessors()
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\exporters\templateexporter.py", line 535, in _init_preprocessors
-        conf = self._get_conf()
-               ^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\exporters\templateexporter.py", line 553, in _get_conf
-        for path in map(Path, self.template_paths):
-                              ^^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\AppData\Roaming\Python\Python311\site-packages\traitlets\traitlets.py", line 716, in __get__
-        return t.cast(G, self.get(obj, cls))  # the G should encode the Optional
-                         ^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\AppData\Roaming\Python\Python311\site-packages\traitlets\traitlets.py", line 626, in get
-        default = obj.trait_defaults(self.name)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\AppData\Roaming\Python\Python311\site-packages\traitlets\traitlets.py", line 1891, in trait_defaults
-        return self._get_trait_default_generator(names[0])(self)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\AppData\Roaming\Python\Python311\site-packages\traitlets\traitlets.py", line 1244, in __call__
-        return self.func(*args, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\exporters\templateexporter.py", line 564, in _template_paths
-        template_names = self.get_template_names()
-                         ^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "C:\Users\marku\miniconda3\Lib\site-packages\nbconvert\exporters\templateexporter.py", line 652, in get_template_names
-        raise ValueError(msg)
-    ValueError: No template sub-directory with name 'notebook' found in the following paths:
-    	C:\Users\marku\AppData\Roaming\jupyter
-    	C:\Users\marku\AppData\Roaming\Python\share\jupyter
-    	C:\Users\marku\miniconda3\share\jupyter
-    	C:\ProgramData\jupyter
+
+
+```python
+!jupyter nbconvert --to markdown development.ipynb --output README.md
+```
+
+    [NbConvertApp] Converting notebook development.ipynb to markdown
+    [NbConvertApp] Support files will be in README_files\
+    [NbConvertApp] Making directory README_files
+    [NbConvertApp] Writing 20263 bytes to README.md
     

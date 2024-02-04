@@ -1056,86 +1056,37 @@ Volume of Aorta: 0.325107 litres
 is necessary to resample the image.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{16}{\boxspacing}
+\prompt{In}{incolor}{18}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{o}{!}jupyter\PY{+w}{ }nbconvert\PY{+w}{ }\PYZhy{}\PYZhy{}to\PY{+w}{ }latex\PY{+w}{ }development.ipynb
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Traceback (most recent call last):
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
-packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 623, in get
-    value = obj.\_trait\_values[self.name]  \# type: ignore
-            \textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\textasciitilde{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-KeyError: 'template\_paths'
+[NbConvertApp] Converting notebook development.ipynb to latex
+C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}nbconvert\textbackslash{}utils\textbackslash{}pandoc.py:51:
+RuntimeWarning: You are using an unsupported version of pandoc (2.12).
+Your version must be at least (2.14.2) but less than (4.0.0).
+Refer to https://pandoc.org/installing.html.
+Continuing with doubts{\ldots}
+  check\_pandoc\_version()
+[NbConvertApp] Support files will be in development\_files\textbackslash{}
+[NbConvertApp] Making directory development\_files
+[NbConvertApp] Writing 78154 bytes to development.tex
+    \end{Verbatim}
 
-During handling of the above exception, another exception occurred:
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{o}{!}jupyter\PY{+w}{ }nbconvert\PY{+w}{ }\PYZhy{}\PYZhy{}to\PY{+w}{ }markdown\PY{+w}{ }development.ipynb\PY{+w}{ }\PYZhy{}\PYZhy{}output\PY{+w}{ }README.md
+\end{Verbatim}
+\end{tcolorbox}
 
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in \_run\_module\_as\_main
-  File "<frozen runpy>", line 88, in \_run\_code
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Scripts\textbackslash{}jupyter-nbconvert.EXE\textbackslash{}\_\_main\_\_.py",
-line 7, in <module>
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
-packages\textbackslash{}jupyter\_core\textbackslash{}application.py", line 285, in launch\_instance
-    return super().launch\_instance(argv=argv, **kwargs)
-           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
-packages\textbackslash{}traitlets\textbackslash{}config\textbackslash{}application.py", line 1046, in launch\_instance
-    app.start()
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}nbconvert\textbackslash{}nbconvertapp.py",
-line 420, in start
-    self.convert\_notebooks()
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-packages\textbackslash{}nbconvert\textbackslash{}nbconvertapp.py",
-line 586, in convert\_notebooks
-    self.exporter = cls(config=self.config)
-                    \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
-packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 350, in \_\_init\_\_
-    super().\_\_init\_\_(config=config, **kw)
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
-packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}exporter.py", line 123, in \_\_init\_\_
-    self.\_init\_preprocessors()
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
-packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 535, in
-\_init\_preprocessors
-    conf = self.\_get\_conf()
-           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
-packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 553, in \_get\_conf
-    for path in map(Path, self.template\_paths):
-                          \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
-packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 716, in \_\_get\_\_
-    return t.cast(G, self.get(obj, cls))  \# the G should encode the Optional
-                     \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
-packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 626, in get
-    default = obj.trait\_defaults(self.name)
-              \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
-packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 1891, in trait\_defaults
-    return self.\_get\_trait\_default\_generator(names[0])(self)
-           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}Python311\textbackslash{}site-
-packages\textbackslash{}traitlets\textbackslash{}traitlets.py", line 1244, in \_\_call\_\_
-    return self.func(*args, **kwargs)
-           \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
-packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 564, in \_template\_paths
-    template\_names = self.get\_template\_names()
-                     \^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}\^{}
-  File "C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}Lib\textbackslash{}site-
-packages\textbackslash{}nbconvert\textbackslash{}exporters\textbackslash{}templateexporter.py", line 652, in
-get\_template\_names
-    raise ValueError(msg)
-ValueError: No template sub-directory with name 'notebook' found in the
-following paths:
-        C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}jupyter
-        C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Python\textbackslash{}share\textbackslash{}jupyter
-        C:\textbackslash{}Users\textbackslash{}marku\textbackslash{}miniconda3\textbackslash{}share\textbackslash{}jupyter
-        C:\textbackslash{}ProgramData\textbackslash{}jupyter
+    \begin{Verbatim}[commandchars=\\\{\}]
+[NbConvertApp] Converting notebook development.ipynb to markdown
+[NbConvertApp] Support files will be in README\_files\textbackslash{}
+[NbConvertApp] Making directory README\_files
+[NbConvertApp] Writing 20263 bytes to README.md
     \end{Verbatim}
 
 
